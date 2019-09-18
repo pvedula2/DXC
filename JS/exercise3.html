@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function login(){
+            var a=document.getElementById("username").value;
+            var b=document.getElementById("pass").value;
+            var sp1=document.getElementById("user");
+            var sp2=document.getElementById("password");
+            sp1.innerHTML=" ";
+            sp2.innerHTML=" ";
+            
+            if(a.length==0){
+            sp1.innerHTML="<font color =red>Enter valid username</font>";
+            }
+            if(b.length==0){
+            sp2.innerHTML="<font color =red>Enter valid password</font>";
+            }
+            else if(b.length<6||b.length>12){
+            sp2.innerHTML="<font color =red>Check Password Length</font>";
+
+            }
+            else if(b.charAt()!="A"){
+            sp2.innerHTML="<font color =red>Password should start with A </font>";
+                
+            }
+            
+
+            
+
+        }
+        </script>
+    </head>
+    <body align="center">
+        <form>
+        <h2 align="center">Generic Login form</h2>
+        <p align="center">Username::<input type="text" name="username" id="username" onfocus="login()"/></p><div id="user"></div>
+        
+    </br>
+    <p align="center">Password::<input type="password" id="pass" onfocus="login()"/></p><div id="password"></div>
+    </br>
+        <p><input type="button" value="Login" onclick="login()" /></p>
+        </form>
+    </body>
+    
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+    <script type="text/javascript">
+    // good practice//
+    function addtwonumbers(){
+        var result=prompt("Do you want to continue");
+        if(result==true){
+     var n1 = parseInt(prompt("Enter number 1:"));
+     var n2 = parseInt(prompt("Enter number 1:"));
+     alert(n1+n2)
+     alert(`${n1} + ${n2}  ${n1+n2}`);
+    }
+    else{
+        alert("Why are you here")
+    }
+    }
+    
+    function displayimage(){
+        var d= new Date();
+        if(d.gethours()>12
+        {
+            alert("Good afternoon");
+        }
+        else{
+            alert("Good morning");
+        }
+    }
+    
+    function temp1(temp){
+        alert(temp)
+    }
+    
+    function temp2(temp5){
+        alert(temp5)
+    }
+
+
+     
+
+     </script>
+</head>
+<body>
+    <p align="center"><input type="button" value="addtwonumbers" onclick="addtwonumbers()"/></p>
+    <br/><p align="center"><input type="button" value="displaymessage" onclick="displayimage()"/></p>
+    <br/><p align="center"><input type="button" value="temp1" onclick="temp1()"/></p>
+    <br/><p align="center"><input type="button" value="temp2" onclick="temp2()"/></p>
+   
+    
+</body>
+</html>

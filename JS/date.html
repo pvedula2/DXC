@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var today= new Date();
+            var ltoday= new Date();
+            ltoday.setFullYear(2019,8,30);
+            alert("todays date is "+today);
+            alert("last date is "+ltoday);
+            if(ltoday>today){
+                alert("Application is still live");
+                        }
+            else{
+                var n=1000*60*60*24;
+                t=(ltoday-today)/n
+                alert("Sorry! Too Late by"+t);
+            }
+
+            </script>
+    </head>
+    <body>
+       
+    </body>
+</html>

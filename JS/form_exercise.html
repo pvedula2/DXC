@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function check(){
+            uname=document.getElementById("number1").value;
+            uname2=document.getElementById("number2").value;
+            if(uname.length==0 || uname2.length==0){
+                alert("Please enter valid credentials");
+
+            }
+            else{
+                var t=parseInt(uname)+parseInt(uname2);
+                alert(t);
+            }
+
+        }
+        </script>
+    </head>
+    <body>
+        Number 1:<input type="text" name="number1" id="number1"/>
+    </br>
+        Number 2:<input type="text" name="number2" id="number2"/>
+    </br>
+    <input type="button" value="add" onclick="check()"> 
+    </body>
+</html>

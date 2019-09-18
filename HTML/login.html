@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body bgcolor="pink">
+    <h2><center>Registeration Form</center></h2>
+    <!--To create a place to go to after pressing submit ,we use action button-->
+    <form action="success.html">
+        <table  cellspacing="10" cellpadding="10" align="center" bgcolor="yellow">
+        <tr><td>User name</td><td><input type="text" name="username" id="username"/></td></tr>
+         <tr><td>Password</td><td><input type="password" name="password" id="password"/></td></tr>
+         <tr><td>Confirm Password</td><td><input type="password" name="confirmpassword" id="confirmpassword"/></td></tr>
+         <tr> <td>Full name</td><td><input type="text" name="fullname" id="fullname"></td></tr>
+         <tr><td><input type="radio" name="gender" id="male" value="male">male</td>
+             <td><input type="radio" name="gender" id="female" value="female" checked>female</td>
+             <td><input type="radio" name="gender" id="others" value="others">others</td>
+         </tr>
+         <tr>
+             <td>Qualification</td>
+             <td>
+                 <select name="Qualification" id="qualification">
+                     <option value="----">Select Option</option>
+                     <option value="MCA" selected>MCA</option>
+                     <option value="MBA">MBA</option>
+                     <option value="MTECH">MTECH</option>
+
+
+                     
+                 </select>
+
+             </td>
+         </tr>
+         <tr>
+             <td>Alert by:::</td>
+             <td><input type="checkbox" name="alertby" id="Mobile" value="Mobile">Mobile</td>
+             <td><input type="checkbox" name="alertby" id="Email" value="Email" checked>Email</td>
+             <td><input type="checkbox" name="alertby" id="Fax" value="Fax">Fax</td>
+             <td><input type="checkbox" name="alertby" id="letters" value="letters">letters</td>
+
+             
+         </tr>
+         <tr>
+                <td><b></b>Insert Resume</td>
+                <td><input type="file" name="a" id="a"/></td>
+                <td><input type="hidden" name="company" id="dxc" ></td>
+                 
+                
+            </tr>
+                  <tr><td align="center"><input type="submit" value="register"></td><td align="center"><input type="reset" value="clear"></td>  </tr>
+        </table>
+         
+    </form>
+
+
+</body>
+
+</html>

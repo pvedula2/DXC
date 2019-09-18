@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function check(){
+            uname=document.getElementById("username").value;
+            if(uname.length==0){
+                alert("Please enter valid credentials");
+
+            }
+            else{
+                alert("welcome"+"  "+uname);
+            }
+
+        }
+        </script>
+    </head>
+    <body>
+        Username:<input type="text" name="username" id="username"/>
+    </br>
+    <input type="button" value="submit" onclick="check()"> 
+    </body>
+</html>
