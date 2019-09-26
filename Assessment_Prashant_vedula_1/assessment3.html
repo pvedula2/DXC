@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <link rel="Stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="jquerry.js"></script>
+    <script type="text/javascript">
+        function check() {
+            var product_ID = document.getElementById("product_ID").value;
+            var order_ID = document.getElementById("order_ID").value;
+            var date = document.getElementById("date").value;
+            var address = document.getElementById("address").value;
+            var price = document.getElementById("price").value;
+            var sp1 = document.getElementById("sp1");
+            var sp2 = document.getElementById("sp2");
+            var sp3 = document.getElementById("sp3");
+            var sp4 = document.getElementById("sp4");
+            var sp5 = document.getElementById("sp5");
+
+            sp1.innerHTML = " ";
+            sp2.innerHTML = " ";
+            sp3.innerHTML = " ";
+            sp4.innerHTML = " ";
+            sp5.innerHTML = " ";
+            if (isNaN((product_ID.substr(1, 4)))) {
+
+            }
+            if (product_ID.charAt(0) != "P") {
+                sp1.innerHTML = "<font color='red'>Starting letter should be P</font>";
+            }
+            if (isNaN((product_ID.substr(1, 4)))||(product_ID.length>6)) {
+                sp1.innerHTML = "<font color='red'>It should only be 5  numbers after P</font>";
+            }
+            if ((order_ID.charAt(0) != "O") || (order_ID.charAt(1) != "D")) {
+                sp2.innerHTML = "<font color='red'>First two letter must  be OD</font>";
+            }
+            else if (order_ID.length < 6) {
+                sp2.innerHTML = "<font color='red'>Should atleast be 6 letters</font>";
+
+            }
+            if (date.length == 0) {
+                sp3.innerHTML = "<font color='red'>Enter date</font>";
+
+            }
+            if (address.length == 0) {
+                sp4.innerHTML = "<font color='red'>Enter address</font>";
+
+            }
+            if (price.length == 0) {
+                sp5.innerHTML = "<font color='red'>Enter price</font>";
+
+            }
+
+
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <body>
+
+        <body>
+            <h1 align="center">CyberShoppe</h1>
+            <form class="form-group border-class">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3 col-xs-1 col-md-offset-4 control-label">
+                            <label class="control-label">Product ID</label>
+                            <input class="form-control" placeholder="Enter the Product ID" id="product_ID"
+                                onclick="check()">
+                            <span id="sp1"></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3 col-xs-1  col-md-offset-4 control-label">
+                            <label class="control-label">Order ID</label>
+                            <input class="form-control " placeholder="Enter your Email address" id="order_ID"
+                                onclick="check()">
+                            <span id="sp2"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3 col-xs-1  col-md-offset-4 control-label">
+                            <label class="control-label">Date of the purchase order</label>
+                            <input type="date" class="form-control" placeholder="Enter your date of the purchase order"
+                                id="date" onclick="check()">
+                            <span id="sp3"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4  col-lg-3 col-xs-1  col-md-offset-4 control-label">
+                            <label class="control-label">Address</label>
+                            <input class="form-control " placeholder="Enter your Address" id="address"
+                                onclick="check()">
+                            <span id="sp4"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3 col-xs-1  col-md-offset-4 control-label">
+                            <label class="control-label">Price </label>
+                            <input class="form-control " placeholder="Enter your Price" id="price" onclick="check()">
+                            <span id="sp5"></span>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3 col-xs-1  col-md-offset-4">
+                            <br> <button type="button" class="btn btn-primary" id="button" onclick="check()">Order</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </body>

@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <link rel="Stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="jquerry.js"></script>
+</head>
+<style>
+    th {
+        background-color: rgb(7, 12, 7);
+        color: white;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #cdcdcd;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table th,
+    table td {
+        padding: 15px;
+        text-align: left;
+        height: 50px;
+        vertical-align: bottom;
+    }
+
+    .border-class {
+        border: thin black solid;
+        margin: 30px;
+        padding: 20px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#error1").hide();
+        $("#error2").hide();
+
+        $("#user").focus(function () {
+            if ($(this).val().length == " ") {
+                $("#error1").show();
+            }
+        })
+        
+        $("#email").focus(function () {
+            if ($(this).val().length == " ") {
+                $("#error2").show();
+            }
+        })
+ 
+        
+        $("#user").blur(function () {
+            if ($(this).val().length != " ") {
+                $("#error1").hide();
+            }
+
+        })
+
+        $("#email").blur(function () {
+            if ($(this).val().length != " ") {
+                $("#error2").hide();
+            }
+
+        })
+
+
+
+        $("#button").click(function () {
+            if (($("#user").val().length != " ") && ($("#email").val().length != " ")) {
+                $("#error1").hide();
+                $("#error2").hide();
+
+                var user1 = $("#user").val();
+                var user2 = $("#email").val();
+
+
+
+                var row = "<tr><td>" + user1 + "</td><td>" + user2 + "</td></tr>";
+                $(".add-row").append(row);
+            }
+
+
+        })
+
+    }
+    )
+</script>
+
+<body>
+
+    <body>
+        <form class="form-group border-class">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-3 control-label">
+                        <label class="control-label">Name:</label>
+                        <input class="form-control" placeholder="Enter your Name" id="user">
+
+                    </div>
+                </div>
+                <div class="row" id="error1">
+                    <div class="col-md-4 col-md-offset-3 control-label" id="error1">
+                        <div class="alert alert-danger" role="alert" id=hidden>
+                            Name is required
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-3 control-label">
+                        <label class="control-label">Email</label>
+                        <input type="email" class="form-control " placeholder="Enter your Email address" id="email">
+
+                    </div>
+                </div>
+                <div class="row" id="error2">
+                    <div class="col-md-4 col-md-offset-3 control-label" id="error1">
+                        <div class="alert alert-danger" role="alert" id=hidden>
+                            Name is required
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-3">
+                       <br> <button type="button" class="btn btn-primary" id="button">ADD</button>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-3">
+                           <br> <table class="add-row">
+                                <th>Name</th>
+                                <th>Email</th>
+
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+        </form>
+
+    </body>
+
+</html>
+</body>
+
+
+</html>

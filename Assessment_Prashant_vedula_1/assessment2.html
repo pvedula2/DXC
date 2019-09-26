@@ -1,0 +1,99 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#div1").text("Name shouldn't be empty")
+            $("#div2").text("Please Select the Gender")
+            $("#div3").text("Please Select the Comment: ")
+            $("#submit").click(function () {
+                var username = $("#username").val();
+                var gender = $('input[name=radio1]:checked').val();
+                var comment = $('input[name=radio2]:checked').val();
+                if (username) {
+                    $("#div1").html("Name: " + username)
+                }
+                if (gender) {
+                    $("#div2").html("Your Gender is: " + gender)
+                }
+                if (comment) {
+                    $("#div3").html("Your Comment is:" + comment)
+                }
+
+
+            });
+
+
+
+
+
+        });
+    </script>
+
+
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body text="black">
+    <h1 align="center">User Form</h1>
+    <table border="10" bgcolor="pink" align="center" cellspacing="10" cellpadding="10">
+        <form>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="username" id="username" /></td>
+            </tr>
+
+            <tr>
+                <td>Spouse Name</td>
+                <td><input type="text" name="spname" id="spname" /></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="radio1" id="gender" value="Male" />Male
+                    <input type="radio" name="radio1" id="gender" value="Female" />Female
+                </td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td>
+                    <input type="radio" name="radio2" id="comments" value="Like" /> Like
+                    <input type="radio" name="radio2" id="comments" value="Dislike" /> Don't Like
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="button" value="Submit" id="submit" onclick="check()" />
+                </td>
+            </tr>
+            <tr>
+                <td align="left" colspan="2">
+                    <div id="div1"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" colspan="2">
+                    <div id="div2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" colspan="2">
+                    <div id="div3"></div>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
